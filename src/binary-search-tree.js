@@ -53,7 +53,7 @@ class BinarySearchTree {
     function findWithin(node, data) {
       if (!node) return null;
 
-      if (node.data === data) return node.data;
+      if (node.data === data) return node;
 
       if (data < node.data) {
         return findWithin(node.left, data);
@@ -128,11 +128,17 @@ module.exports = {
   BinarySearchTree
 };
 
-const bst = new BinarySearchTree();
-bst.add(13);
-bst.add(15);
-console.log(bst);
-console.log(bst.find(13));
-console.log(bst.find(15));
-console.log(bst.has(15));
-console.log(bst.root());
+// const bst = new BinarySearchTree();
+// bst.add(2);
+// bst.add(7);
+// bst.add(1);
+// bst.add(8);
+// bst.add(4);
+// bst.add(32);
+// bst.add(12);
+// bst.add(14);
+// console.log(bst);
+// console.log(bst.find(8));
+// // console.log(bst.find(15));
+// // console.log(bst.has(15));
+// console.log(bst.root());
